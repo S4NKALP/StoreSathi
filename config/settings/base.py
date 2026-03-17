@@ -3,7 +3,6 @@ generated with djinit
 Common settings shared between development and production environment
 """
 
-from datetime import timedelta
 from pathlib import Path
 
 import environ
@@ -25,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 # Application definition
 THIRD_PARTY_APPS = [
     "corsheaders",
-    "drf_spectacular",
+    "django_nepkit",
 ]
 
 USER_DEFINED_APPS = [
@@ -110,7 +109,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 
 LANGUAGE_CODE = "en-us"
-TIME_ZONE = "UTC"
+TIME_ZONE = "Asia/Kathmandu"
 USE_I18N = True
 USE_TZ = True
 
@@ -125,40 +124,6 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-# REST Framework Settings
-REST_FRAMEWORK = {
-    "DEFAULT_RENDERER_CLASSES": [
-        "rest_framework.renderers.JSONRenderer",
-    ],
-    "DEFAULT_PARSER_CLASSES": [
-        "rest_framework.parsers.JSONParser",
-    ],
-    "DEFAULT_AUTHENTICATION_CLASSES": (
-        "rest_framework_simplejwt.authentication.JWTAuthentication",
-        "rest_framework.authentication.SessionAuthentication",
-    ),
-    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
-    "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
-    "PAGE_SIZE": 20,
-}
-
-# DRF Spectacular settings
-SPECTACULAR_SETTINGS = {
-    "TITLE": "config API",
-    "DESCRIPTION": "API documentation for config",
-    "VERSION": "1.0.0",
-    "SERVE_INCLUDE_SCHEMA": False,
-    "COMPONENT_SPLIT_REQUEST": True,
-    "SCHEMA_PATH_PREFIX": "/api/",
-}
-
-# JWT Settings
-SIMPLE_JWT = {
-    "ACCESS_TOKEN_LIFETIME": timedelta(days=1),
-    "REFRESH_TOKEN_LIFETIME": timedelta(days=3),
-    "ROTATE_REFRESH_TOKENS": True,
-    "BLACKLIST_AFTER_ROTATION": True,
-}
 
 # CORS Settings
 CORS_ALLOW_METHODS = [
@@ -187,3 +152,10 @@ CORS_PREFLIGHT_MAX_AGE = 86400  # 24 hours
 SECURE_BROWSER_XSS_FILTER = True
 SECURE_CONTENT_TYPE_NOSNIFF = True
 X_FRAME_OPTIONS = "DENY"
+
+NEPKIT = {
+    "DEFAULT_LANGUAGE": "en",  # "en" or "ne"
+    "ADMIN_DATEPICKER": True,  # Toggle the datepicker
+    "TIME_FORMAT": 12,  # 12 or 24 hour display
+    "DATE_INPUT_FORMATS": ["%Y-%m-%d", "%d/%m/%Y", "%d-%m-%Y"],  # Input formats
+}
