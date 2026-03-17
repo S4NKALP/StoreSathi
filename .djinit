@@ -1,0 +1,21 @@
+{
+    "project_name": "config",
+    "structure": {
+        "standard": true,
+        "predefined": false,
+        "unified": false,
+        "single": false
+    },
+    "apps": {
+        "nested": true,
+        "nested_dir": "apps"
+    },
+    "settings": {
+        "use_database_url": false,
+        "database_type": "mysql"
+    },
+    "cicd": {
+        "github": true,
+        "gitlab": false
+    }
+}
