@@ -15,6 +15,7 @@ dependencies = [
     "gunicorn>=25.1.0",
     "django-ninja>=1.6.0",
     "django-unfold>=0.85.0",
+    "django-nepkit>=0.2.1",
 ]
 
 [tool.ruff]

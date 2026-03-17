@@ -28,6 +28,7 @@ dependencies = [
     { name = "django" },
     { name = "django-cors-headers" },
     { name = "django-environ" },
+    { name = "django-nepkit" },
     { name = "django-ninja" },
     { name = "django-unfold" },
     { name = "gunicorn" },
@@ -44,6 +45,7 @@ requires-dist = [
     { name = "django", specifier = ">=6.0.3" },
     { name = "django-cors-headers", specifier = ">=4.9.0" },
     { name = "django-environ", specifier = ">=0.13.0" },
+    { name = "django-nepkit", specifier = ">=0.2.1" },
     { name = "django-ninja", specifier = ">=1.6.0" },
     { name = "django-unfold", specifier = ">=0.85.0" },
     { name = "gunicorn", specifier = ">=25.1.0" },
@@ -90,6 +92,33 @@ wheels = [
 ]
 
 [[package]]
+name = "django-filter"
+version = "25.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "django" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/2c/e4/465d2699cd388c0005fb8d6ae6709f239917c6d8790ac35719676fffdcf3/django_filter-25.2.tar.gz", hash = "sha256:760e984a931f4468d096f5541787efb8998c61217b73006163bf2f9523fe8f23", size = 143818, upload-time = "2025-10-05T09:51:31.521Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/c1/40/6a02495c5658beb1f31eb09952d8aa12ef3c2a66342331ce3a35f7132439/django_filter-25.2-py3-none-any.whl", hash = "sha256:9c0f8609057309bba611062fe1b720b4a873652541192d232dd28970383633e3", size = 94145, upload-time = "2025-10-05T09:51:29.728Z" },
+]
+
+[[package]]
+name = "django-nepkit"
+version = "0.2.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "django" },
+    { name = "django-filter" },
+    { name = "djangorestframework" },
+    { name = "nepali" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/46/f2/5ba6d4e5f07b1fa9e59aad3b5a2ab39f03776814b8b6f8eb9d584bdb6b25/django_nepkit-0.2.1.tar.gz", hash = "sha256:1187df1ff84c77b86182bcbcbc442655c67cd68cb4d57f09eda5fee015f3baef", size = 54254, upload-time = "2026-02-05T15:09:52.935Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/30/14/6644ce8b52b03212a2672ff9912359ea58a2cf82555ee87bb96153b9eed4/django_nepkit-0.2.1-py3-none-any.whl", hash = "sha256:87ea3fb914c51047f6f275c78d5956c8e4dae72a6b286b0c8750e5487e47e83f", size = 56592, upload-time = "2026-02-05T15:09:51.51Z" },
+]
+
+[[package]]
 name = "django-ninja"
 version = "1.6.0"
 source = { registry = "https://pypi.org/simple" }
@@ -115,6 +144,18 @@ wheels = [
 ]
 
 [[package]]
+name = "djangorestframework"
+version = "3.16.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "django" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/8a/95/5376fe618646fde6899b3cdc85fd959716bb67542e273a76a80d9f326f27/djangorestframework-3.16.1.tar.gz", hash = "sha256:166809528b1aced0a17dc66c24492af18049f2c9420dbd0be29422029cfc3ff7", size = 1089735, upload-time = "2025-08-06T17:50:53.251Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/b0/ce/bf8b9d3f415be4ac5588545b5fcdbbb841977db1c1d923f7568eeabe1689/djangorestframework-3.16.1-py3-none-any.whl", hash = "sha256:33a59f47fb9c85ede792cbf88bde71893bcda0667bc573f784649521f1102cec", size = 1080442, upload-time = "2025-08-06T17:50:50.667Z" },
+]
+
+[[package]]
 name = "gunicorn"
 version = "25.1.0"
 source = { registry = "https://pypi.org/simple" }
@@ -124,6 +165,15 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/66/13/ef67f59f6a7896fdc2c1d62b5665c5219d6b0a9a1784938eb9a28e55e128/gunicorn-25.1.0.tar.gz", hash = "sha256:1426611d959fa77e7de89f8c0f32eed6aa03ee735f98c01efba3e281b1c47616", size = 594377, upload-time = "2026-02-13T11:09:58.989Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/da/73/4ad5b1f6a2e21cf1e85afdaad2b7b1a933985e2f5d679147a1953aaa192c/gunicorn-25.1.0-py3-none-any.whl", hash = "sha256:d0b1236ccf27f72cfe14bce7caadf467186f19e865094ca84221424e839b8b8b", size = 197067, upload-time = "2026-02-13T11:09:57.146Z" },
+]
+
+[[package]]
+name = "nepali"
+version = "1.2.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/42/6e/26c0f7b544c978ec7b9d12ee1219023213e2dd14f3ea18e4f1665b1b945f/nepali-1.2.0.tar.gz", hash = "sha256:75a9d0bd4b3e95d72c7045539b63e84077686ffa12dff5db3fffe6579cbb511d", size = 63658, upload-time = "2026-02-02T15:06:34.084Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/f1/e5/4aea4554803da821bce158b14ca66f7622f11daa281e9e720e4b97861b3f/nepali-1.2.0-py3-none-any.whl", hash = "sha256:1f9244b2fcb51e6b9e710cc1c483024f8600954d545a9a12a2accf53213911b1", size = 69502, upload-time = "2026-02-02T15:06:32.689Z" },
 ]
 
 [[package]]
